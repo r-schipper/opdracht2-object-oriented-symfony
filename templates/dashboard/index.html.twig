@@ -11,12 +11,13 @@
     <div class="example-wrapper">
         <h1>Chalet.nl Praktijkopdracht</h1>
 
-        Hier een voorbeeld van een Twig-template. Deze wordt getoond via de DefaultController.
-
-        <ul>
-            {% for item in items %}
-                <li>{{ item }}</li>
+        <ul class="nav nav-tabs">
+            {% for page in pages %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/{{ page }}">{{ page }}</a>
+                </li>
             {% endfor %}
         </ul>
     </div>
+</table>
 {% endblock %}

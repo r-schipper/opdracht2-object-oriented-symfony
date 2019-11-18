@@ -5,15 +5,17 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-class DefaultController extends AbstractController
+class DashboardController extends AbstractController
 {
     /**
-     * @Route("/", name="default")
+     * @Route("/", name="dashboard")
      */
     public function index()
     {
-        return $this->render('default/index.html.twig', [
-            'items' => ['item1', 'item2'],
+        $pages = ['accommodaties'];
+
+        return $this->render('dashboard/index.html.twig', [
+            'pages' => $pages
         ]);
     }
 }
